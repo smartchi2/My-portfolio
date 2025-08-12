@@ -248,13 +248,13 @@ const testimonials = [
 ];
 
 const socialImgs = [
-  {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
+  // {
+  //   name: "insta",
+  //   imgPath: "/images/insta.png",
+  // },
   {
     name: "fb",
-    imgPath: "/images/fb.png",
+    imgPath: "/images/facebook_logo.webp",
   },
   {
     name: "x",
