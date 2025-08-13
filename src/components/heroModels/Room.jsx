@@ -2,7 +2,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Room(props) {
-  const gltf = useGLTF('/models/optimized-room.glb');
+  const gltf = useGLTF('/models/optimized-Room.glb');
 
   if (!gltf || !gltf.nodes || !gltf.materials) {
     return null; // Model not yet loaded
@@ -41,4 +41,4 @@ export function Room(props) {
   );
 }
 
-useGLTF.preload('/models/optimized-room.glb');
+useGLTF.preload('/models/optimized-Room.glb');
