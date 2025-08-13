@@ -2,7 +2,7 @@ import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { Room } from './Room';
+import { Room } from './room';
 import HeroLight from './HeroLight';
 
 function HeroExperience() {
