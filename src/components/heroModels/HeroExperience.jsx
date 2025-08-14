@@ -2,7 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { Suspense } from "react";
-import { Room } from "./room";
+import { Room } from "./Room";
 import HeroLights from "./HeroLight";
 
 // Simple error boundary for Canvas
