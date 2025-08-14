@@ -13,20 +13,21 @@ const Testimonials = () => {
     />
 
     <div className='lg:columns-3 md:columns-2 columns-1 mt-16'>
-    {testimonials.map(({imgPath, name, mentions, review }) =>(
-       <GlobalCard card={{review}}>
-        <div className='flex items-center gap-3'>
-         <div>
-            <img src={imgPath} alt={name}/>
-         </div>
+   {testimonials.map(({ imgPath, name, mentions, review }, index) => (
+   <GlobalCard key={name || index} card={{ review }}>
+     <div className='flex items-center gap-3'>
+       <div>
+         <img src={imgPath} alt={name} />
+       </div>
 
-         <div>
-            <p className='font-bold'>{name}</p>
-            <p className='text-white-50'>{mentions}</p>
-         </div>
-        </div>
-       </GlobalCard>
-    ))}
+       <div>
+         <p className='font-bold'>{name}</p>
+         <p className='text-white-50'>{mentions}</p>
+       </div>
+     </div>
+   </GlobalCard>
+))}
+
     </div>
     </div>
     </section>

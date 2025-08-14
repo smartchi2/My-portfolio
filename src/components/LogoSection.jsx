@@ -1,34 +1,31 @@
 import React from 'react'
-import {logoIconsList} from '../constants/index.js'
+import { logoIconsList } from '../constants/index.js'
+
 const LogoSection = () => {
+  const LogoIcon = ({ icon }) => {
+    return (
+      <div className="flex-none flex-center marquee-item">
+        <img src={icon.imgPath} alt={icon.name} />
+      </div>
+    )
+  }
 
-    const LogoIcon = ({icon}) =>{
-        return (
-            <div className='flex-none flex-center marquee-item'>
-            <img src={icon.imgPath} alt={icon.name}/>
-
-            </div>
-        )
-    }
   return (
-    <div className='md:my-20 my-10 relative'>
-    <div className='gradient-edge'/> 
-    <div className='gradient-edge'/> 
+    <div className="md:my-20 my-10 relative">
+      <div className="gradient-edge" />
+      <div className="gradient-edge" />
 
-    <div className='marquee h-52'>
-        <div className='marquee-box md:gap-12 gap-5'>
-        {logoIconsList.map((icon) => (
-            <LogoIcon key={icon.name} icon={icon}/>
+      <div className="marquee h-52">
+        <div className="marquee-box md:gap-12 gap-5">
+          {logoIconsList.map((icon, index) => (
+            <LogoIcon key={`${icon.name}-${index}`} icon={icon} />
+          ))}
 
-        ))}
-        
-        {logoIconsList.map((icon) => (
-            <LogoIcon key={icon.name} icon={icon}/>
-
-        ))}
-
+          {logoIconsList.map((icon, index) => (
+            <LogoIcon key={`${icon.name}-dup-${index}`} icon={icon} />
+          ))}
         </div>
-    </div>
+      </div>
     </div>
   )
 }
